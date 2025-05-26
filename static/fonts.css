@@ -6,6 +6,7 @@
 }
 
 :root {
-    --serif-font: 'JetBrainsMono', serif;
-    --sans-serif-font: 'JetBrainsMono', serif;
+    --sans-serif-font: 'JetBrainsMono', 'Inter', Helvetica, Arial, sans-serif;
+    --serif-font: 'JetBrainsMono', 'Source Serif', 'Georgia', serif;
+    --code-font: 'JetBrainsMono', 'Cascadia Code';
 }
