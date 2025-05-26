@@ -3,8 +3,6 @@ title = "Hello, World!"
 date = "2093-02-16"
 description = "My first post using the tabi theme."
 
-[taxonomies]
-tags = ["demo"]
 +++
 
 This is your first blog post! You can:
