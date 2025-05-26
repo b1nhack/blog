@@ -1,0 +1,11 @@
+@font-face {
+    src: local('JetBrainsMono'),
+        url('/fonts/JetBrainsMono-Regular.woff2') format("woff2");
+    font-family: 'JetBrainsMono';
+    font-display: swap;
+}
+
+:root {
+    --serif-font: 'JetBrainsMono', serif;
+    --sans-serif-font: 'JetBrainsMono', serif;
+}
