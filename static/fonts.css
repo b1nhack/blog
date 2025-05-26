@@ -2,7 +2,7 @@
     src: local('JetBrainsMono'),
         url('/fonts/JetBrainsMono-Regular.woff2') format("woff2");
     font-family: 'JetBrainsMono';
-    font-display: swap;
+    font-display: block;
 }
 
 :root {
