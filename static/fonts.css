@@ -2,11 +2,11 @@
     src: local('JetBrainsMono'),
         url('/fonts/JetBrainsMono-Regular.woff2') format("woff2");
     font-family: 'JetBrainsMono';
-    font-display: block;
+    font-display: swap;
 }
 
 :root {
-    --sans-serif-font: 'JetBrainsMono', 'Inter', Helvetica, Arial, sans-serif;
-    --serif-font: 'JetBrainsMono', 'Source Serif', 'Georgia', serif;
-    --code-font: 'JetBrainsMono', 'Cascadia Code';
+    --sans-serif-font: 'JetBrainsMono', sans-serif;
+    --serif-font: 'JetBrainsMono', serif;
+    --code-font: 'JetBrainsMono';
 }
