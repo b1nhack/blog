@@ -1,4 +1,4 @@
-base_url = "https://b1n.pages.dev"
+base_url = "https://b1n.io"
 title = "~/b1n"
 description = "Linux kernel vulnerability researcher"
 author = "b1n"
@@ -292,11 +292,11 @@ socials = [
 # This configuration (along with the right webserver settings) gets an A+ in Mozilla's Observatory: https://observatory.mozilla.org
 # Note: to use a Zola built-in syntax highlighting theme, allow unsafe-inline for style-src.
 allowed_domains = [
-    { directive = "font-src", domains = ["'self'", "data:"] },
+    { directive = "font-src", domains = ["'self'", "data:", "https://b1n.pages.dev"] },
     { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
-    { directive = "media-src", domains = ["'self'"] },
-    { directive = "script-src", domains = ["'self'"] },
-    { directive = "style-src", domains = ["'self'"] },
+    { directive = "media-src", domains = ["'self'", "https://b1n.pages.dev"] },
+    { directive = "script-src", domains = ["'self'", "https://b1n.pages.dev"] },
+    { directive = "style-src", domains = ["'self'", "https://b1n.pages.dev"] },
 ]
 
 # Enable the CSP directives configured (or default).
