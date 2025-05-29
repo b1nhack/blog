@@ -182,7 +182,7 @@ quick_navigation_buttons = true
 
 # Add a Table of Contents to posts, right below the title and metadata.
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-toc = true
+toc = false
 
 # Date format used when listing posts (main page, /blog section, tag posts list…)
 # Default is "6th July 2049" in English and "%d %B %Y" in other languages.
