@@ -35,9 +35,11 @@ kitty配置文件[kitty.conf](https://github.com/b1nhack/dotfiles/blob/main/kitt
 
 我使用[Zsh](https://www.zsh.org), 配置文件目录[zsh](https://github.com/b1nhack/dotfiles/tree/main/zsh).
 
-## VCS
+## Version Control System
 
-我使用[Git](https://git-scm.com) DVCS. 并使用[delta](https://github.com/dandavison/delta)增强Git的输出. Git配置文件[config](https://github.com/b1nhack/dotfiles/blob/main/git/config), delta配置文件[delta.gitconfig](https://github.com/b1nhack/dotfiles/blob/main/delta/delta.gitconfig).
+我使用[Git](https://git-scm.com) DVCS (Distributed Version Control System), 并使用[delta](https://github.com/dandavison/delta)增强Git的输出.
+
+Git配置文件[config](https://github.com/b1nhack/dotfiles/blob/main/git/config), delta配置文件[delta.gitconfig](https://github.com/b1nhack/dotfiles/blob/main/delta/delta.gitconfig).
 
 ## Password Manager
 
