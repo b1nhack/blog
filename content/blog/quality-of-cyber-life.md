@@ -1,6 +1,7 @@
 +++
 title = "Quality of Cyber Life"
 date = "2025-05-29"
+updated = 2025-06-02
 description = "一些重要的非技术知识清单, 提升效率和生活质量."
 +++
 
@@ -16,15 +17,15 @@ description = "一些重要的非技术知识清单, 提升效率和生活质量
 
 ## Package Manager
 
-我使用[Homebrew](https://brew.sh)和[Nix](https://nixos.org)包管理器, 分别用于管理GUI应用程序([Casks](https://formulae.brew.sh/cask/))和CLI软件包([Packages](https://search.nixos.org/packages)). 使用[Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer)安装`Nix`.
+我使用[Homebrew](https://brew.sh)和[Nix](https://nixos.org)包管理器, 分别用于管理GUI应用程序([Casks](https://formulae.brew.sh/cask/))和CLI软件包([Packages](https://search.nixos.org/packages)). 使用[Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer)安装Nix.
 
-[Brewfile](https://github.com/b1nhack/dotfiles/blob/main/Brewfile)记录了我通过`Homebrew`安装的`Casks`, 通过`brew bundle dump`命令导出. [nix-packages](https://github.com/b1nhack/dotfiles/blob/main/nix-packages)记录了我通过`Nix`安装的`Packages`, 通过`nix profile list > nix-packages`命令导出.
+[Brewfile](https://github.com/b1nhack/dotfiles/blob/main/Brewfile)记录了我通过Homebrew安装的Casks, 通过`brew bundle dump`命令导出. [nix-packages](https://github.com/b1nhack/dotfiles/blob/main/nix-packages)记录了我通过Nix安装的Packages, 通过`nix profile list > nix-packages`命令导出.
 
 ## Terminal Emulator
 
 我使用[kitty](https://sw.kovidgoyal.net/kitty)终端模拟器, [WezTerm](https://wezterm.org)也是个不错的选择.
 
-`kitty`配置文件[kitty.conf](https://github.com/b1nhack/dotfiles/blob/main/kitty/kitty.conf).
+kitty配置文件[kitty.conf](https://github.com/b1nhack/dotfiles/blob/main/kitty/kitty.conf).
 
 ## Font
 
@@ -36,7 +37,7 @@ description = "一些重要的非技术知识清单, 提升效率和生活质量
 
 ## VCS
 
-我使用[Git](https://git-scm.com) DVCS. 并使用[delta](https://github.com/dandavison/delta)增强`Git`的输出. `Git`配置文件[config](https://github.com/b1nhack/dotfiles/blob/main/git/config), `delta`配置文件[delta.gitconfig](https://github.com/b1nhack/dotfiles/blob/main/delta/delta.gitconfig).
+我使用[Git](https://git-scm.com) DVCS. 并使用[delta](https://github.com/dandavison/delta)增强Git的输出. Git配置文件[config](https://github.com/b1nhack/dotfiles/blob/main/git/config), delta配置文件[delta.gitconfig](https://github.com/b1nhack/dotfiles/blob/main/delta/delta.gitconfig).
 
 ## Password Manager
 
@@ -60,8 +61,8 @@ description = "一些重要的非技术知识清单, 提升效率和生活质量
 
 ## Software Development Platform
 
-我主要使用[GitHub](https://github.com)软件开发平台, 一些重要的代码仓库会使用[Codeberg](https://codeberg.org), 再通过`Mirror`功能同步到`GitHub`.
+我主要使用[GitHub](https://github.com)软件开发平台, 一些重要的代码仓库会使用[Codeberg](https://codeberg.org), 再通过Mirror功能同步到GitHub.
 
-[^1]: `Neovim`需要频繁使用`Esc`切换模式.
+[^1]: Neovim需要频繁使用Esc切换模式.
 
 [^2]: 终端模拟器使用[JetBrainsMono Nerd Font](https://www.programmingfonts.org/#jetbrainsmono)以显示大量图标.

@@ -1,12 +1,13 @@
 +++
 title = "First Patch to Linux Kernel"
 date = "2025-05-30"
+updated = 2025-06-02
 description = "Linux Kernel开发所需的前置知识."
 +++
 
-`Linux Kernel`是地球最大的开源项目之一, 使用电子邮件工作流接受贡献.
+Linux Kernel是地球最大的开源项目之一, 使用电子邮件工作流接受贡献.
 
-推荐阅读[Outreachyfirstpatch](https://kernelnewbies.org/Outreachyfirstpatch), 指导创建第一个`Linux Kernel`补丁. 官方文档查看[Submitting patches](https://docs.kernel.org/process/submitting-patches.html).
+推荐阅读[Outreachyfirstpatch](https://kernelnewbies.org/Outreachyfirstpatch), 指导创建第一个Linux Kernel补丁. 官方文档查看[Submitting patches](https://docs.kernel.org/process/submitting-patches.html).
 
 ## Kernel Tree
 
@@ -16,19 +17,19 @@ description = "Linux Kernel开发所需的前置知识."
 
 {{ aside(text="在十几年前, 还很可能会收到一些不太优雅的回复.", position="right") }}
 
-`Linux Kernel`有严格的编码风格要求, 细节查看[Linux kernel coding style](https://docs.kernel.org/process/coding-style.html). 违反编码风格的补丁会被维护者拒绝.
+Linux Kernel有严格的编码风格要求, 细节查看[Linux kernel coding style](https://docs.kernel.org/process/coding-style.html). 违反编码风格的补丁会被维护者拒绝.
 
 提交补丁前使用`scripts/checkpatch.pl`脚本检查编码风格, 如果违反编码风格的代码看起来更好, 那么最好保持原样, 常见的噪音查看[CheckpatchTips](https://kernelnewbies.org/CheckpatchTips).
 
 ## Email Workflow
 
-`Linux Kernel`使用电子邮件工作流, 补丁通过电子邮件发送给维护者, 维护者审查通过后合并到子树. 使用`scripts/get_maintainer.pl`脚本通过commit或文件查询维护者的邮件地址和相关邮件列表.
+Linux Kernel使用电子邮件工作流, 补丁通过电子邮件发送给维护者, 维护者审查通过后合并到子树. 使用`scripts/get_maintainer.pl`脚本通过commit或文件查询维护者的邮件地址和相关邮件列表.
 
 推荐使用`git send-email`发送补丁, [sourcehut](https://sourcehut.org)创建了基于此的电子邮件工作流教程[git-send-email](https://git-send-email.io).
 
 ## Patch Philosophy
 
-`Linux Kernel`对补丁有严格的格式要求, 细节查看[PatchPhilosophy](https://kernelnewbies.org/PatchPhilosophy).
+Linux Kernel对补丁有严格的格式要求, 细节查看[PatchPhilosophy](https://kernelnewbies.org/PatchPhilosophy).
 
 下面是使用`git format-patch`生成的补丁示例:
 
@@ -72,4 +73,4 @@ v2:
 
 ## Reply Email
 
-提交补丁后, 可能会需要一些讨论, 以确定最终方案, 开发者需要回复电子邮件参与讨论. `Linux Kernel`要求邮件是内联的纯文本格式, 禁用[format=flowed](https://www.ietf.org/rfc/rfc3676.txt), 自动换行和GPG签名, 并使用[UTF-8](https://en.wikipedia.org/wiki/UTF-8)编码. 推荐使用[NeoMutt](https://neomutt.org)电子邮件客户端, 其他被认为纯文本支持良好的电子邮件客户端查看[Use plain text email](https://useplaintext.email). 引用原始邮件内容时使用[内联回复](https://en.wikipedia.org/wiki/Posting_style#Interleaved_style).
+提交补丁后, 可能会需要一些讨论, 以确定最终方案, 开发者需要回复电子邮件参与讨论. Linux Kernel要求邮件是内联的纯文本格式, 禁用[format=flowed](https://www.ietf.org/rfc/rfc3676.txt), 自动换行和GPG签名, 并使用[UTF-8](https://en.wikipedia.org/wiki/UTF-8)编码. 推荐使用[NeoMutt](https://neomutt.org)电子邮件客户端, 其他被认为纯文本支持良好的电子邮件客户端查看[Use plain text email](https://useplaintext.email). 引用原始邮件内容时使用[内联回复](https://en.wikipedia.org/wiki/Posting_style#Interleaved_style).
