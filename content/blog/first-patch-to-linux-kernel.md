@@ -1,7 +1,7 @@
 +++
 title = "First Patch to Linux Kernel"
-date = "2025-05-30"
-updated = 2025-06-02
+date = 2025-05-30
+updated = 2026-10-14
 description = "Linux Kernel开发所需的前置知识."
 +++
 
@@ -15,7 +15,7 @@ Linux Kernel是地球最大的开源项目之一, 使用电子邮件工作流接
 
 ## Coding Style
 
-{{ aside(text="在十几年前, 还很可能会收到一些不太优雅的回复.", position="right") }}
+{{< aside text="在十几年前, 还很可能会收到一些不太优雅的回复." position="right" />}}
 
 Linux Kernel有严格的编码风格要求, 细节查看[Linux kernel coding style](https://docs.kernel.org/process/coding-style.html). 违反编码风格的补丁会被维护者拒绝.
 

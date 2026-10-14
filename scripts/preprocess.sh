@@ -8,7 +8,7 @@
 #                                                                                 #
 #                                  FEATURES                                       #
 # Updates the "updated" field in the front matter of .md files.                   #
-# Runs subset_font if config.toml has been modified.                              #
+# Runs subset_font if zola.toml has been modified.                              #
 ###################################################################################
 
 # Function to exit the script with an error message.
@@ -94,14 +94,14 @@ for file in "${modified_md_files[@]}"; do
 done
 
 #########################################################
-# Run subset_font if config.toml has been modified.     #
+# Run subset_font if zola.toml has been modified.     #
 # https://welpo.github.io/tabi/blog/custom-font-subset/ #
 #########################################################
-if git diff --cached --name-only | grep -q "config.toml"; then
-	echo "config.toml modified. Running subset_font…"
+if git diff --cached --name-only | grep -q "zola.toml"; then
+	echo "zola.toml modified. Running subset_font…"
 
 	# Call the subset_font script.
-	scripts/subset_font -c config.toml -f static/fonts/JetBrainsMono-Regular.woff2 -o static/
+	scripts/subset_font -c zola.toml -f static/fonts/monaspace-neon-var.woff2 -o static/
 
 	# Add the generated subset.css file to the commit.
 	git add static/custom_subset.css

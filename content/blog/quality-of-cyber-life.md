@@ -1,6 +1,6 @@
 +++
 title = "Quality of Cyber Life"
-date = "2025-05-29"
+date = 2025-05-29
 updated = 2025-06-02
 description = "一些重要的非技术知识清单, 提升效率和生活质量."
 +++
