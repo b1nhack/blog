@@ -1,12 +1,14 @@
 +++
 title = "Quality of Cyber Life"
+description = "一些重要的非技术知识清单, 提升效率和生活质量."
 date = 2025-05-29
 updated = 2025-06-02
-description = "一些重要的非技术知识清单, 提升效率和生活质量."
+draft = false
 
 [extra]
 copy_button = false
 code_block_name_links = false
+mermaid = false
 +++
 
 记录我在赛博世界的生活方式, 仅包含足以让感兴趣的人前进的指引. 推荐阅读[The Missing Semester of Your CS Education](https://missing.csail.mit.edu).
