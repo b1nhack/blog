@@ -1,15 +1,18 @@
 #!/usr/bin/env bash
 
-###################################################################################
-# This script is run by git before a commit is made.                              #
-# To use it, copy it to .git/hooks/pre-commit and make it executable.             #
-# Alternatively, run the following command from the root of the repo:             #
-# git config core.hooksPath .githooks                                             #
-#                                                                                 #
-#                                  FEATURES                                       #
-# Updates the "updated" field in the front matter of .md files.                   #
-# Runs subset_font if zola.toml has been modified.                              #
-###################################################################################
+# This script is run by git before a commit is made.
+# To use it, copy it to .git/hooks/pre-commit and make it executable.
+# Alternatively, run the following command from the root of the repo:
+# git config core.hooksPath .githooks
+#
+# 1. Updates the "updated" field in the front matter of .md files.
+# 2. Runs subset_font if zola.toml has been modified.
+# 3. Aborts the commit if a draft .md file or an .md file with "TODO" is being committed.
+
+# Check if the script is being run from the root of the repo.
+if [[ ! $(git rev-parse --show-toplevel) == $(pwd) ]]; then
+	error_exit "This script must be run from the root of the repo."
+fi
 
 # Function to exit the script with an error message.
 function error_exit() {
@@ -17,16 +20,23 @@ function error_exit() {
 	exit "${2:-1}"
 }
 
-# Check if the script is being run from the root of the repo.
-if [[ ! $(git rev-parse --show-toplevel) == $(pwd) ]]; then
-	error_exit "This script must be run from the root of the repo."
-fi
-
 # Function to extract the date from the front matter.
 function extract_date() {
 	local file="$1"
 	local field="$2"
 	grep -m 1 "^$field =" "$file" | sed -e "s/$field = //" -e 's/ *$//'
+}
+
+# Function to check if the .md file is a draft.
+function is_draft() {
+	local file="$1"
+	grep -q "draft = true" "$file"
+}
+
+# Check if the file contains "TODO".
+function contains_todo() {
+	local file="$1"
+	grep -q "TODO" "$file"
 }
 
 # Check for changes outside of the front matter.
@@ -93,15 +103,41 @@ for file in "${modified_md_files[@]}"; do
 	git add "$file"
 done
 
-#########################################################
-# Run subset_font if zola.toml has been modified.     #
-# https://welpo.github.io/tabi/blog/custom-font-subset/ #
-#########################################################
+# Update the "updated" field in the front matter of .md files.
+# https://osc.garden/blog/zola-date-git-hook/
+# Interrupt the commit if a draft .md file is being committed.
+# Interrupt the commit if an .md file with "TODO" is being committed.
+
+# Get the newly added and modified files, but not deleted files.
+mapfile -t all_changed_files < <(git diff --cached --name-only --diff-filter=d)
+
+# Loop through each newly added or modified file for TODO and draft checking.
+for file in "${all_changed_files[@]}"; do
+	# Ignore this script.
+	if [[ "$file" == "$0" ]]; then
+		continue
+	fi
+
+	# If the file is an .md file containing "TODO", abort the commit.
+	if [[ "$file" == *.md ]] && contains_todo "$file"; then
+		error_exit "File $file contains TODO Remove or complete the TODO before committing."
+	fi
+
+	# If the file is an .md file and it's a draft, abort the commit.
+	if [[ "$file" == *.md ]]; then
+		if is_draft "$file"; then
+			error_exit "Draft file $file is being committed!"
+		fi
+	fi
+done
+
+# Run subset_font if zola.toml has been modified.
+# https://welpo.github.io/tabi/blog/custom-font-subset/
 if git diff --cached --name-only | grep -q "zola.toml"; then
 	echo "zola.toml modified. Running subset_font…"
 
 	# Call the subset_font script.
-	scripts/subset_font -c zola.toml -f static/fonts/monaspace-neon-var.woff2 -o static/
+	scripts/subset_font.sh -c zola.toml -f static/fonts/monaspace-neon-var.woff2 -o static/
 
 	# Add the generated subset.css file to the commit.
 	git add static/custom_subset.css
