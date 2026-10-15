@@ -3,6 +3,10 @@ title = "First Patch to Linux Kernel"
 date = 2025-05-30
 updated = 2026-10-14
 description = "Linux Kernel开发所需的前置知识."
+
+[extra]
+copy_button = true
+code_block_name_links = false
 +++
 
 Linux Kernel是地球最大的开源项目之一, 使用电子邮件工作流接受贡献.

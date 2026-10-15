@@ -109,11 +109,11 @@ show_remote_source = true  # Defaults to true.
 
 # Add a "copy" button to code blocks (loads ~700 bytes of JavaScript).
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-copy_button = true
+copy_button = false
 
 # Make code block names clickable if they are URLs (loads ~400 bytes of JavaScript).
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-code_block_name_links = true
+code_block_name_links = false
 
 # Force left-to-right (LTR) direction for code blocks.
 # Set to false to allow code to follow the document's natural direction.

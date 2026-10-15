@@ -3,6 +3,10 @@ title = "Linux Kernel Development and Debugging on macOS"
 date = 2025-06-02
 updated = 2025-06-03
 description = "macOS搭建Linux Kernel开发调试环境"
+
+[extra]
+copy_button = true
+code_block_name_links = true
 +++
 
 我使用搭载[Apple silicon](https://en.wikipedia.org/wiki/Apple_silicon)的MacBook Pro, 通过Linux虚拟机跨平台编译x86_64内核, 开发和调试都在macOS中原生进行. Linux Kernel VRED (Vulnerability Research and Exploit Development)通常不修改内核代码, 不需要频繁编译.
