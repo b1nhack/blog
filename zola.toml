@@ -457,7 +457,7 @@ domain = ""
 # Will identify you on the indieweb (see https://microformats.org/wiki/h-card)
 [extra.hcard]
 # Enable home page h-card.
-# enable = true
+enable = false
 # Add your email to the card if extra.email is set and not encoded.
 # with_mail = true
 # Add your social links ('socials' config) to the card.
