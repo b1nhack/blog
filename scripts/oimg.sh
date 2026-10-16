@@ -11,6 +11,5 @@ fi
 
 png="$1"
 
-oxipng -o max -s -a "$png"
-cwebp -mt "$png" -o "${png%.png}.webp"
-rm -f "$png"
+oxipng -o max -z --fast -s "$png"
+cwebp -z 9 -mt "$png" -o "${png%.png}.webp"
