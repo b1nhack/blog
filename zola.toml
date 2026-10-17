@@ -45,6 +45,11 @@ theme = "tokyo-night"
 style = "class"
 error_on_missing_language = true
 
+[languages.zh-Hans]
+title = "~/b1n"
+description = "Linux内核漏洞研究员"
+generate_feeds = true
+
 [extra]
 # Check out the documentation (or the comments below) to learn how to customise tabi:
 # https://welpo.github.io/tabi/blog/mastering-tabi-settings/
@@ -195,22 +200,21 @@ toc = false
 
 # Date format used when listing posts (main page, /blog section, tag posts list…)
 # Default is "6th July 2049" in English and "dd MMMM y" in other languages.
-long_date_format = "MMMM dd y"
+long_date_format = "MMM d, y"
 
 # Date format used for blog posts.
 # Default is "6th Jul 2049" in English and "d MMM y" in other languages.
-short_date_format = "MMM d y"
+short_date_format = "MMM d, y"
 
 # Date format used for the archive page.
 # Default is "06 July" in English and "dd MMM" in other languages.
-archive_date_format = "MMM dd"
+archive_date_format = "MMM d"
 
 # Per-language date format overrides. Formats use UTS-35.
 # Examples: Spanish uses "3 de febrero de 2024", German uses "3. Februar 2024".
-# date_formats = [
-#     { lang = "es", long = "d 'de' MMMM 'de' y", short = "d MMM y" },
-#     { lang = "de", long = "d. MMMM y", short = "dd.MM.y", archive = "dd. MMM" },
-# ]
+date_formats = [
+    { lang = "zh-Hans", long = "y MMMM d日", short = "y年MMMd日", archive = "MMMM d" },
+]
 
 # Custom separator used in title tag and posts metadata (between date, time to read, and tags).
 separator = "•"
