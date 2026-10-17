@@ -64,6 +64,12 @@ if [ ! -f "$font_file" ]; then
 	exit 1
 fi
 
+# Check that pyftsubset is installed.
+if ! command -v pyftsubset >/dev/null 2>&1; then
+	echo "ERROR: pyftsubset not found."
+	exit 1
+fi
+
 # Extract the title and menu names from the config file.
 title=$(awk -F' = ' '/^title/{print $2}' "$config_file" | tr -d '"')
 menu_names=$(awk -F' = ' '/^menu/{f=1;next} /socials/{f=0} f && /name/{print $2}' "$config_file" | cut -d',' -f1 | tr -d '"')

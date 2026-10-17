@@ -136,8 +136,9 @@ done
 if git diff --cached --name-only | grep -q "zola.toml"; then
 	echo "zola.toml modified. Running subset_font…"
 
-	# Call the subset_font script.
-	scripts/subset_font.sh -c zola.toml -f static/fonts/monaspace-neon-var.woff2 -o static/
+	if ! scripts/subset_font.sh -c zola.toml -f static/fonts/monaspace-neon-var.woff2 -o static/; then
+		error_exit "subset_font.sh failed."
+	fi
 
 	# Add the generated subset.css file to the commit.
 	git add static/custom_subset.css
