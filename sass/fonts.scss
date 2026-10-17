@@ -22,6 +22,10 @@
     --code-font: 'Monaspace Neon Var', 'Noto Sans SC', monospace;
 
     text-autospace: normal;
+
+    pre, code {
+        text-autospace: no-autospace;
+    }
 }
 
 /* Chinese: Noto Sans SC — self-hosted slices (Google Fonts source, 202 faces, weights 400/700) */
