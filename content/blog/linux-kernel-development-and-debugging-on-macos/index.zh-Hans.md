@@ -1,6 +1,6 @@
 +++
 title = "Linux Kernel Development and Debugging on macOS"
-description = "macOS搭建Linux Kernel开发调试环境"
+description = "macOS搭建Linux Kernel开发调试环境."
 date = 2025-06-02
 updated = 2025-06-03
 draft = false
