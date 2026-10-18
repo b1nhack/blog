@@ -7,4 +7,4 @@ section_path = "blog/_index.md"
 max_posts = 3
 +++
 
-Linux内核漏洞研究员
+Linux 内核漏洞研究员

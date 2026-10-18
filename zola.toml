@@ -47,7 +47,7 @@ error_on_missing_language = true
 
 [languages.zh-Hans]
 title = "~/b1n"
-description = "Linux内核漏洞研究员"
+description = "Linux 内核漏洞研究员"
 generate_feeds = true
 
 [extra]
@@ -213,7 +213,7 @@ archive_date_format = "MMM d"
 # Per-language date format overrides. Formats use UTS-35.
 # Examples: Spanish uses "3 de febrero de 2024", German uses "3. Februar 2024".
 date_formats = [
-    { lang = "zh-Hans", long = "y MMMM d日", short = "y年MMMd日", archive = "MMMM d" },
+    { lang = "zh-Hans", long = "y MMMM d", short = "y 年 M 月 d 日", archive = "MMMM d" },
 ]
 
 # Custom separator used in title tag and posts metadata (between date, time to read, and tags).
