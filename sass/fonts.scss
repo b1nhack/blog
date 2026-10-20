@@ -7,14 +7,6 @@
     font-display: swap;
 }
 
-@font-face {
-    src: url('/fonts/monaspace-neon-var.woff2') format("woff2");
-    font-family: 'Monaspace Neon Var';
-    font-weight: 200 800;
-    font-style: italic;
-    font-display: swap;
-}
-
 :root {
     /* Per-character matching: Latin/digits stop at Monaspace,
        Han falls through to Noto Sans SC (self-hosted slices). */
