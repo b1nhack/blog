@@ -280,7 +280,7 @@ encode_plaintext_email = false  # Setting is ignored if email is already encoded
 socials = [
     { name = "Github", url = "https://github.com/b1nhack", icon = "github" },
     { name = "X", url = "https://x.com/b1nhack", icon = "x" },
-    { name = "Email", url = "https://gist.github.com/b1nhack/75702379f3b7f5ba0045d756d37277b4", icon = "email" },
+    { name = "Email", url = "email", icon = "email" },
 ]
 
 # Fediverse profile.
